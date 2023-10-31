@@ -25,7 +25,7 @@
         //收到資料後輪流做成按鈕
         request.onload = function () {
             let student = request.response;
-            alert("收到學生數量 : " + student.length);
+            alert(student);
             for (var i in student) {
                 var now = student[i];
                 var stu = now.name;
