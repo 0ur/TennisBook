@@ -17,7 +17,7 @@
  //用Get讀取資料
     window.onload = () => {
      // api url - google appscript 產出的 url
-        let requestURL = google_app_script;
+        let requestURL = google_app_script + "?func=doGetStudents";
         let request = new XMLHttpRequest();
         request.open("GET", requestURL);
         request.responseType = "json";
