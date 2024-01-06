@@ -1,1 +1,1 @@
-const google_app_script = "https://script.google.com/macros/s/AKfycbwHJDDhhKIxH2xRluAQTiocPCoa7r96-IAaAFA3vzh8-RD3PM6itQpVzlKqt8e8U4rGLQ/exec";
+const google_app_script = "https://script.google.com/macros/s/AKfycby6k9XhVOKH6zmdsW6Lsc7IS3GLbXlaOsAPGfjXHhZSAW3N8NAa45NYkmTH_sJHXwv-gw/exec";
