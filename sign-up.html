@@ -13,15 +13,16 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
- <main>
-  <h1><a href="index.html">點名系統</a></h1>
-  <p>新增學生</p>
-  <input type="text" class="form-control" id="name" />
-  <button type="button" id="sendOrder">新增</button>
-  <p>
-   <a href="https://Edit-Mr.github.io">毛哥EM</a>製作<br />
-   送出後請稍等數秒 勿重複新增
-  </p>
+    <main>
+        <h1><a href="index.html">點名系統</a></h1>
+        <p>新增學生</p>
+        <p>
+            名稱: <input type="text" class="form-control" id="name" />
+        </p>
+        <p>
+            Email: <input type="text" class="form-control" id="email" />
+        </p>
+        <button type="button" id="sendOrder">新增</button>
  </main>
  <script>
   $(function () {
@@ -31,23 +32,33 @@
           // 姓名
   
           var name = $("#name").val();
+          var email = $("#email").val();
   
           $("input").focus(function () {
               $(this).css("border", "");
           });
   
-          // 擋住不填資料
+           
   
-          if (name == "") {
+           if (name == "") {
               $("#name").css("border", "1px solid #ff0000");
-          } else {
+           } 
+           if (email == "") {
+              $("#email").css("border", "1px solid #ff0000");
+           }
+
+           // 擋住不填資料
+           if (name == "" || email == "") {
+             return; 
+           }else {
               var name = name.replace(" ", "");
-  
+              var email = name.replace(" ", "");
               var data = {
                   name: name,
+                  email: email,
                   func: "AddStudent",
               };
-  
+
               $.ajax({
                   // 這邊用get type
   
@@ -72,8 +83,8 @@
   
                       alert("新增成功!!");
                   },
-              });
-          }
+               });
+            }
       });
   });
  </script>
