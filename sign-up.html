@@ -11,6 +11,7 @@
  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
  <!-- 載入jQuery -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script type="text/javascript" src="properties.js"></script>
 </head>
 <body>
     <main>
@@ -52,27 +53,14 @@
               };
 
               $.ajax({
-                  // 這邊用get type
-  
                   type: "get",
-  
-                  // api url - google appscript 產出的 url
-  
-                  url: "https://script.google.com/macros/s/AKfycby6k9XhVOKH6zmdsW6Lsc7IS3GLbXlaOsAPGfjXHhZSAW3N8NAa45NYkmTH_sJHXwv-gw/exec",
-  
-                  // 剛剛整理好的資料帶入
-  
+                  url: google_app_script,
                   data: data,
-  
-                  // 資料格式是JSON
-  
                   dataType: "JSON",
   
                   // 成功送出 會回頭觸發下面這塊
-  
                   success: function (response) {
                       console.log(response);
-  
                       alert("新增成功!!");
                   },
                });
