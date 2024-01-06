@@ -20,25 +20,27 @@
         <p>名稱: <input type="text" id="name"/> </p>
         <p>Email: <input type="text" id="email"/> </p>
         <button type="button" id="sendOrder">新增</button>
- </main>
- <script>
-  $(function () {
-      // 監聽 按鈕點擊
+    </main>
+    <script>
+        $(function () { // 監聽 按鈕點擊
+        $("#sendOrder").click(function (e) {
+            $("#name").disabled  = true;
+            $("#email").disabled = true;
+            $("#sendOrder").disabled = true;
+            
+            var name = $("#name").val();
+            var email = $("#email").val();
   
-      $("#sendOrder").click(function (e) {
-          var name = $("#name").val();
-          var email = $("#email").val();
-  
-          $("input").focus(function () {
-              $(this).css("border", "");
-          });
+            $("input").focus(function () {
+                $(this).css("border", "");
+            });
        
-           if (name == "") {
-              $("#name").css("border", "1px solid #ff0000");
-           } 
-           if (email == "") {
-              $("#email").css("border", "1px solid #ff0000");
-           }
+            if (name == "") {
+                $("#name").css("border", "1px solid #ff0000");
+            } 
+            if (email == "") {
+                $("#email").css("border", "1px solid #ff0000");
+            }
 
            // 擋住不填資料
            if (name == "" || email == "") {
@@ -62,6 +64,10 @@
                   success: function (response) {
                       console.log(response);
                       alert("新增成功!!");
+
+                        $("#name").disabled  = false;
+                        $("#email").disabled = false;
+                        $("#sendOrder").disabled = false;
                   },
                });
             }
