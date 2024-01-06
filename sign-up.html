@@ -40,10 +40,11 @@
                 $("#email").css("border", "1px solid #ff0000");
             }
 
-           // 擋住不填資料
-           if (name == "" || email == "") {
-             return; 
-           }else {
+            // 擋住不填資料
+            if (name == "" || email == "") {
+                alert("名稱和Email不可能空白!!");
+                return; 
+            }else {
               var name = name.replace(" ", "");
               var email = email.replace(" ", "");
               var data = {
