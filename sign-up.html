@@ -25,17 +25,13 @@
       // 監聽 按鈕點擊
   
       $("#sendOrder").click(function (e) {
-          // 姓名
-  
           var name = $("#name").val();
           var email = $("#email").val();
   
           $("input").focus(function () {
               $(this).css("border", "");
           });
-  
-           
-  
+       
            if (name == "") {
               $("#name").css("border", "1px solid #ff0000");
            } 
@@ -62,7 +58,7 @@
   
                   // api url - google appscript 產出的 url
   
-                  url: "https://script.google.com/macros/s/AKfycbwFDLxv_v6lgT77KpyVhGhZEtN7yL-x_5pW379nmPGq_Yz6817BV8iZZ2TWjWTUTOZI_A/exec",
+                  url: "https://script.google.com/macros/s/AKfycby6k9XhVOKH6zmdsW6Lsc7IS3GLbXlaOsAPGfjXHhZSAW3N8NAa45NYkmTH_sJHXwv-gw/exec",
   
                   // 剛剛整理好的資料帶入
   
