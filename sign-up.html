@@ -24,8 +24,6 @@
     <script>
         $(function () { // 監聽 按鈕點擊
         $("#sendOrder").click(function (e) {
-            $("#name").disabled  = true;
-            $("#email").disabled = true;
             $("#sendOrder").disabled = true;
             
             var name = $("#name").val();
@@ -65,8 +63,8 @@
                       console.log(response);
                       alert("新增成功!!");
 
-                        $("#name").disabled  = false;
-                        $("#email").disabled = false;
+                        $("#name").value = "";
+                        $("#email").valuse = "";
                         $("#sendOrder").disabled = false;
                   },
                });
